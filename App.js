@@ -26,8 +26,10 @@ const App = () => {
       {(()=>{
         if(name === 'woosin') return 'Hello Woosin!';
         else return 'Hello World';
-      })()}</Text>
-    <MyButton />
+      })()}</Text> 
+    <MyButton onPress={()=> alert('defaultProps를 테스트함!')}/>
+    <MyButton title='props Test' onPress={()=> alert('TouchableOpacity로 버튼을 만들고 Mybutton컴포넌트를 작성함!')}/>
+    <MyButton onPress={()=> alert('children 매개를 테스트함!')}>This is Child Button</MyButton>
     </View>
   );
 }
