@@ -30,7 +30,7 @@ import PropTypes from 'prop-types'
 // };
 const MyButton = (props) => {//props 활용
     const {title='defaultProps',children, onPress} = props;
-    console.log(props);
+    // console.log(props);
     return(
         <TouchableOpacity style={
             {
