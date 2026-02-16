@@ -6,6 +6,17 @@ import EventButton from './src/components/EventButton';
 import EventInput from './src/components/EventInput';
 import { viewStyle } from './src/style';
 import { Header,Contents,Footer } from './src/components/LayOut';
+import ShadowBox from './src/components/ShadowBox';
+import ButtonStyled from './src/components/ButtonStyled';
+import styled from 'styled-components/native'; 
+import Input from './src/components/Input';
+
+const Container = styled.View`
+  flex:1;
+  background-color:#ffffff;
+  align-items:center;
+  justify-content:center;
+`;
 
 const App = () => {
   // const name='woosin'
@@ -28,9 +39,10 @@ const App = () => {
     */
    //외부 스타일 viewStyle 사용
     <View style={viewStyle.container}>
-      <Header/>
+      {/* <Header/>
       <Contents/>
-      <Footer/>
+      <Footer/> */}
+      
       {/* <Text style={viewStyle.text}>
       {(()=>{
         if(name === 'woosin') return 'Hello Woosin!';
@@ -42,6 +54,13 @@ const App = () => {
     <Counter/>
     <EventButton/>
     <EventInput/> */}
+    {/* <ShadowBox/> */}
+    <Container>
+      <ButtonStyled title="woosin"/>
+      <ButtonStyled title="Hanbit"/>
+      <Input borderColor="#3498db"/>
+      <Input borderColor="#ff00f2"/>
+    </Container>
     </View>
   );
 }
