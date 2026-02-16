@@ -4,6 +4,8 @@ import MyButton from './src/components/MyButton';
 import Counter from './src/components/Counter';
 import EventButton from './src/components/EventButton';
 import EventInput from './src/components/EventInput';
+import { viewStyle } from './src/style';
+import { Header,Contents,Footer } from './src/components/LayOut';
 
 const App = () => {
   // const name='woosin'
@@ -24,8 +26,12 @@ const App = () => {
     alignItems: 'center',
     justifyContent: 'center',}}>
     */
-    <View style={styles.container}>
-      <Text style={styles.text}>
+   //외부 스타일 viewStyle 사용
+    <View style={viewStyle.container}>
+      <Header/>
+      <Contents/>
+      <Footer/>
+      {/* <Text style={viewStyle.text}>
       {(()=>{
         if(name === 'woosin') return 'Hello Woosin!';
         else return 'Hello World';
@@ -35,23 +41,10 @@ const App = () => {
     <MyButton onPress={()=> alert('children 매개를 테스트함!')}>This is Child Button</MyButton>
     <Counter/>
     <EventButton/>
-    <EventInput/>
+    <EventInput/> */}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize:50,
-    color: '#fff'
-  }
-});
 
 export default App;
 

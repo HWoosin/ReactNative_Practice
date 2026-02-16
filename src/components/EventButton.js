@@ -9,7 +9,7 @@ const EventButton = () =>{
     const _onLongPress = () => {console.log("길게누름!")};
 
     return (
-        <TouchableOpacity style={{
+        <TouchableOpacity style={{//인라인 스타일링
             backgroundColor:'#0400ff',
             padding:15,
             width:200,
